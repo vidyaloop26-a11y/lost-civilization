@@ -185,6 +185,7 @@ export const TeamChat = ({ state, setState, timeline, onTimelineFinished }) => {
       cancelled = true;
       playingRef.current = false;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pendingDecision === null, awaitingContinue, endOfDay]);
 
   const handleDecision = (option) => {

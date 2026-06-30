@@ -5,6 +5,7 @@ export const DiscoveryFeed = ({ state, setState }) => {
   // Mark feed unread = 0 when this tab opens
   useEffect(() => {
     setState((s) => (s.feedUnread === 0 ? s : { ...s, feedUnread: 0 }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const items = state.feedItems;
