@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Spectral:wght@400;500;600;700&display=swap");
+
+.App {
+  min-height: 100vh;
+}
+
+/* Set archaeological typography */
+body {
+  font-family: "Spectral", Georgia, serif;
+  background-color: #f5ebd7;
+  color: #3b2412;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", "Spectral", Georgia, serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Typing dots */
+.lc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #8a6a3d;
+  display: inline-block;
+  animation: lcBounce 1s infinite ease-in-out;
+}
+.lc-dot-d1 {
+  animation-delay: 0.15s;
+}
+.lc-dot-d2 {
+  animation-delay: 0.3s;
+}
+@keyframes lcBounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+/* Subtle paper grain on body */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(circle at 1px 1px, #6b4423 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+/* Selection */
+::selection {
+  background: #b8741a;
+  color: #fff7e6;
+}
+
+/* Scrollbar (warm tones) */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #b8741a;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
